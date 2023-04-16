@@ -9,6 +9,7 @@ const bAdd = document.querySelector('#addButton')
 const itTask = document.querySelector('#itTask')
 const form = document.querySelector('.form')
 const taskName = document.querySelector('#time #taskName')
+taskName.textContent = 'Awaiting for a task..'
 
 renderTime();
 renderTasks();
@@ -63,7 +64,7 @@ function renderTasks() {
             if(!timer) {
                 const id = button.getAttribute('data-id')
                 startButtonHandler(id)
-                button.textContent = 'In progress..'
+                button.textContent = 'In process..'
             }
         })
     })
@@ -71,7 +72,7 @@ function renderTasks() {
 
 //Vamos a calcular los 25 miuntos de la actividad principal
 function startButtonHandler(id) {
-    timeCounter = 5; //Formato de tiempo
+    timeCounter = 25 * 60; //Formato de tiempo
     currentTask = id;
     const taskIndex = tasksList.findIndex(task => task.id === id)
     taskName.textContent = tasksList[taskIndex].title
@@ -100,7 +101,7 @@ function timerHandler(id) {
 }
 
 function startBreak() {
-    timeCounter = 5
+    timeCounter = 5 * 60
     taskName.textContent = 'Break'
     renderTime();
     timerBreak = setInterval(() => {

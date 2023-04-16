@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cornflowerblue;
+    font-family: 'Kanit', sans-serif;
+    font-size: 62.5%;
+}
+
+#app {
+    width: 500px;
+    background-color: antiquewhite;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+#app #value {
+    font-size: 7rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.tasks-container {
+    padding-bottom: 25px;
+}
+
+.tasks-container .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.tasks-container .form form {
+    display: flex;
+    gap: 20px;
+}
+
+.tasks-container .form input[type=text] {
+    width: 300px;
+    height: 40px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.tasks-container .form input[type=submit] {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: cornflowerblue;
+    width: 110px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+/* <div class="task">
+    <div class="completed">${
+        task.completed
+        ? `<span class="done">Done</span>`
+        :`<button class="start-button" data-id="${task.id}">Start</button>`}</div>
+    <div class="title">${task.title}</div>
+</div>   */
+
+.tasks-container .task {
+    display: flex;
+    margin-left: 10px;
+    gap: 15px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.tasks-container .task button {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 35px;
+    border-radius: 8px;
+}
+
+.tasks-container .task .done {
+    font-size: 1rem;
+    font-weight: 400;
+    color: darkgrey;
+    background-color: lightgray;
+    padding: 5px 31px;
+    border-radius: 5px;
+
+}
+
+#taskName {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+}
